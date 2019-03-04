@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { addNewTodo } from "../actions";
+import { addNewTodo, toggleCompleted } from "../actions";
 import TodoForm from "./TodoForm";
 import Todo from "./Todo";
 
@@ -15,6 +15,10 @@ class TodoList extends React.Component {
     this.setState({
       newTodo: ""
     });
+  };
+  toggleCompleted = (ev, index) => {
+    ev.preventDefault();
+    this.props.toggleCompleted(index);
   };
 
   handleChanges = ev => {
@@ -45,5 +49,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { addNewTodo }
+  { addNewTodo, toggleCompleted }
 )(TodoList);
