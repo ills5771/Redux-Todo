@@ -12,7 +12,11 @@ import {
 export default function Todo(props) {
   return (
     <ListItem>
-      <Checkbox disableRipple />
+      <Checkbox
+        checked={props.checked}
+        onClick={props.toggleCompleted}
+        disableRipple
+      />
       <ListItemText primary={props.todo.task} />
       <ListItemSecondaryAction>
         <IconButton aria-label="Delete Todo">

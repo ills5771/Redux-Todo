@@ -31,7 +31,11 @@ class TodoList extends React.Component {
       <div className="container">
         <div className="todo-list">
           {this.props.todos.map((todo, index) => (
-            <Todo key={index} todo={todo} />
+            <Todo
+              key={index}
+              todo={todo}
+              toggleCompleted={this.toggleCompleted}
+            />
           ))}
         </div>
         <TodoForm
