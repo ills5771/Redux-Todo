@@ -5,9 +5,9 @@ import "./App.css";
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div style={{ width: "675px", margin: "10% 25%" }} className="App">
+        <h1> Redux Todo </h1>
         <TodoList />
-        Redux Todo
       </div>
     );
   }

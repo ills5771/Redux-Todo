@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { addNewTodo } from "../actions";
 import TodoForm from "./TodoForm";
+import Todo from "./Todo";
 
 class TodoList extends React.Component {
   state = {
@@ -26,7 +27,7 @@ class TodoList extends React.Component {
       <div className="container">
         <div className="todo-list">
           {this.props.todos.map((todo, index) => (
-            <h4 key={index}>{todo.task}</h4>
+            <Todo key={index} todo={todo} />
           ))}
         </div>
         <TodoForm
