@@ -33,7 +33,7 @@ class TodoList extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <div style={{ margin: "5% 20%" }} className="container">
         <div className="todo-list">
           {this.props.todos.map((todo, index) => (
             <Todo

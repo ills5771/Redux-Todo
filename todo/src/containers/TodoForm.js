@@ -25,13 +25,6 @@ function TodoForm(props) {
         </Grid>
       </Grid>
     </Paper>
-    // <form onSubmit={props.addTodo}>
-    //   <input type="text"
-    //    value={props.newTodo}
-    //   onChange={props.handleChanges} />
-    //   <button>Add Todo</button>
-    //   <button>Clear Completed</button>
-    // </form>
   );
 }
 
