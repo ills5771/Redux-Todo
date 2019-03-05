@@ -19,7 +19,7 @@ export default function Todo(props) {
       />
       <ListItemText primary={props.todo.task} />
       <ListItemSecondaryAction>
-        <IconButton aria-label="Delete Todo">
+        <IconButton onClick={props.deleteTodo} aria-label="Delete Todo">
           <DeleteOutlined />
         </IconButton>
       </ListItemSecondaryAction>
